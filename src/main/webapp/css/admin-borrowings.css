@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+/* BORROWING MANAGEMENT TABLE */
+
+.borrowing-management {
+    width: 100%;
+}
+
+.borrowing-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 24px;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.borrowing-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.borrowing-table thead {
+    background: rgba(129, 140, 248, 0.09);
+}
+
+.borrowing-table th {
+    padding: 17px 18px;
+    color: #a5b4fc;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.borrowing-table td {
+    padding: 17px 18px;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+    color: #e2e8f0;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.borrowing-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.borrowing-table tbody tr:hover {
+    background: rgba(129, 140, 248, 0.06);
+}
+
+.borrow-user,
+.borrow-book {
+    font-weight: 500;
+}
+
+.borrow-user i {
+    margin-right: 8px;
+    color: #a5b4fc;
+}
+
+.borrow-status {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.borrow-status.borrowed {
+    color: #93c5fd;
+    background: rgba(59, 130, 246, 0.13);
+}
+
+.borrow-status.overdue {
+    color: #fca5a5;
+    background: rgba(239, 68, 68, 0.13);
+}
+
+.borrow-status.returned {
+    color: #6ee7b7;
+    background: rgba(16, 185, 129, 0.13);
+}
+
+.empty-borrowings {
+    padding: 48px 20px !important;
+    text-align: center;
+    color: #94a3b8 !important;
+}
+
+.empty-borrowings i {
+    margin-bottom: 12px;
+    font-size: 28px;
+    color: #818cf8;
+}
+
+.empty-borrowings p {
+    margin: 0;
+}
+
+.borrowing-table-footer {
+    margin-top: 16px;
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: right;
+}
+
+.borrowing-table-footer strong {
+    color: #e2e8f0;
+}
+
+@media (max-width: 760px) {
+    .borrowing-table th,
+    .borrowing-table td {
+        padding: 14px;
+    }
+
+    .borrowing-table-footer {
+        text-align: left;
+    }
+}
+
+/* REQUEST MANAGEMENT */
+.request-count {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 999px;
+    color: #cbd5e1;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.renewal-section-heading,
+.borrowing-records-heading {
+    margin-top: 36px;
+}
+
+.request-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    min-width: 190px;
+}
+
+.request-actions form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.request-actions button {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.request-approve-button {
+    background: rgba(34, 197, 94, 0.14);
+    border-color: rgba(34, 197, 94, 0.3) !important;
+    color: #86efac;
+}
+
+.request-reject-button {
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(239, 68, 68, 0.3) !important;
+    color: #fca5a5;
+}
+
+.request-reject-form input[type="text"] {
+    box-sizing: border-box;
+    flex: 1 1 150px;
+    min-width: 0;
+    padding: 9px 10px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 8px;
+    outline: none;
+    background: rgba(15, 23, 42, 0.6);
+    color: #f8fafc;
+    font: inherit;
+    font-size: 12px;
+}
+
+.request-reject-form input[type="text"]:focus {
+    border-color: #818cf8;
+}
+
+.borrow-feedback {
+    margin-bottom: 18px;
+    padding: 13px 16px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.borrow-feedback-success {
+    border-color: rgba(34, 197, 94, 0.3);
+    background: rgba(34, 197, 94, 0.1);
+    color: #86efac;
+}
+
+.borrow-feedback-error {
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.1);
+    color: #fca5a5;
+}
+
+@media (max-width: 768px) {
+    .request-actions {
+        min-width: 220px;
+    }
+
+    .request-actions form {
+        flex-direction: column;
+    }
+
+    .request-actions button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,27 @@
+
+# Eclipse settings
+.settings/
+.metadata/
+
+# Compiled files
+*.class
+bin/
+build/
+target/
+
+# Server and temporary files
+Servers/
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+
+# Build archives
+*.war
+*.ear

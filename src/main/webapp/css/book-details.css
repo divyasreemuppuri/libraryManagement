@@ -1,0 +1,162 @@
+@charset "UTF-8";
+.book-details-page {
+            min-height: 100vh;
+            padding: 150px 7% 90px;
+        }
+
+        .details-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 35px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            transition: color 0.25s ease;
+        }
+
+        .details-back:hover {
+            color: var(--accent);
+        }
+
+        .details-card {
+            display: grid;
+            grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.4fr);
+            gap: 55px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(
+                145deg,
+                rgba(255, 255, 255, 0.065),
+                rgba(255, 255, 255, 0.025)
+            );
+            box-shadow: var(--shadow-glass);
+        }
+
+        .details-cover {
+            width: 100%;
+            max-width: 360px;
+            max-height: 510px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 16px;
+            background: var(--bg-elevated);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+        }
+
+        .details-cover img {
+            width: 100%;
+            height: 100%;
+            max-height: 510px;
+            object-fit: cover;
+        }
+
+        .details-info {
+            align-self: center;
+            min-width: 0;
+        }
+
+        .details-category {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 7px 14px;
+            border: 1px solid rgba(196, 167, 255, 0.3);
+            border-radius: 30px;
+            color: var(--accent);
+            background: rgba(167, 139, 250, 0.1);
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .details-info h1 {
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            line-height: 1.2;
+            overflow-wrap: anywhere;
+        }
+
+        .details-author {
+            margin-bottom: 28px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .details-author i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .details-description {
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            overflow-wrap: anywhere;
+        }
+
+        .details-meta {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .meta-item {
+            padding: 15px;
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.035);
+        }
+
+        .meta-item span {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+        }
+
+        .meta-item strong {
+            display: block;
+            overflow-wrap: anywhere;
+        }
+
+        .details-availability {
+            margin-bottom: 28px;
+            font-weight: 700;
+        }
+
+        .details-availability.available {
+            color: var(--success);
+        }
+
+        .details-availability.unavailable {
+            color: var(--danger);
+        }
+
+        @media (max-width: 760px) {
+            .book-details-page {
+                padding: 125px 6% 65px;
+            }
+
+            .details-card {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 24px;
+            }
+
+            .details-cover {
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .details-meta {
+                grid-template-columns: 1fr;
+            }
+
+            .details-card {
+                padding: 18px;
+            }
+        }
